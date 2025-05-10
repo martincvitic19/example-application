@@ -13,3 +13,13 @@ zephyr_include_directories(include)
 
 add_subdirectory(drivers)
 add_subdirectory(lib)
+
+# Add Google Test and Google Mock
+find_package(GTest REQUIRED)
+find_package(GMock REQUIRED)
+
+# Include directories
+include_directories(${GTEST_INCLUDE_DIRS} ${GMOCK_INCLUDE_DIRS})
+
+# Add tests to build
+target_link_libraries(non_trivial_button_led_app gtest gmock)
