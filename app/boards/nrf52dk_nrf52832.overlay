@@ -1,0 +1,11 @@
+&button1 {
+    status = "okay";
+    gpios = <&gpio0 11 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    label = "User Button 1";
+};
+
+&led1 {
+    status = "okay";
+    gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
+    label = "User LED 1";
+};
